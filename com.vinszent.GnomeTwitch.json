@@ -45,8 +45,7 @@
       "sources": [{
         "type": "git",
         "url": "https://github.com/vinszent/gnome-twitch.git",
-        "branch": "v0.4.0",
-        "commit": "e74f1759616acc678f05399df496b66c4b70000a"
+        "branch": "v0.4.1"
       }],
       "modules": [
         {
