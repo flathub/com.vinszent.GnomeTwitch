@@ -1,7 +1,8 @@
 {
   "app-id": "com.vinszent.GnomeTwitch",
+  "branch": "stable",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.24",
+  "runtime-version": "3.26",
   "sdk": "org.gnome.Sdk",
   "command": "gnome-twitch",
   "finish-args": [
@@ -23,12 +24,11 @@
   "modules": [
     {
       "name": "gst-libav",
-      "config-opts": [ "--disable-gtk-doc", "--with-system-libav" ],
-      "cleanup": [ "*.la", "/share/gtk-doc" ],
+      "buildsystem": "meson",
       "sources": [{
         "type": "archive",
-        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.10.4.tar.xz",
-        "sha256": "6ca0feca75e3d48315e07f20ec37cf6260ed1e9dde58df355febd5016246268b"
+        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.3.tar.xz",
+        "sha256": "015ef8cab6f7fb87c8fb42642486423eff3b6e6a6bccdcd6a189f436a3619650"
       }],
       "modules": [ "org.ffmpeg.FFmpeg.json" ]
     },
@@ -42,11 +42,17 @@
         "--buildtype=release", "--libdir=lib"
       ],
       "cleanup": [ "/include" ],
-      "sources": [{
-        "type": "git",
-        "url": "https://github.com/vinszent/gnome-twitch.git",
-        "branch": "v0.4.1"
-      }],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://github.com/vinszent/gnome-twitch/archive/v0.4.1.tar.gz",
+          "sha256": "a0e2b13bdd9c2ca572bf70da9b440e886aedf4d1588073dc1338743e8b6eacef"
+        },
+        {
+          "type": "patch",
+          "path": "6bee8bc0d1626087340138e66225d55ebe9d498e.patch"
+        }
+      ],
       "modules": [
         {
           "name": "libpeas",
@@ -55,8 +61,8 @@
                        "/lib/*.la", "/lib/pkgconfig", "/share/gir-1.0", "/share/gtk-doc" ],
           "sources": [{
             "type": "archive",
-            "url": "https://download.gnome.org/sources/libpeas/1.20/libpeas-1.20.0.tar.xz",
-            "sha256": "f392fffe2dc00072a51bb2a1b274224a06bdc5f9c3b3c0ac4816909e9933d354"
+            "url": "https://download.gnome.org/sources/libpeas/1.22/libpeas-1.22.0.tar.xz",
+            "sha256": "5b2fc0f53962b25bca131a5ec0139e6fef8e254481b6e777975f7a1d2702a962"
           }]
         }
       ]
