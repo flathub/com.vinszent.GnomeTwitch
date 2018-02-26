@@ -29,17 +29,15 @@
         "type": "archive",
         "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.4.tar.xz",
         "sha256": "2a56aa5d2d8cd912f2bce17f174713d2c417ca298f1f9c28ee66d4aa1e1d9e62"
-      }],
-      "modules": [ "org.ffmpeg.FFmpeg.json" ]
+      }]
     },
     {
       "name": "gnome-twitch",
       "buildsystem": "meson",
-      "config-opts": [ "--buildtype=release" ],
       "builddir": true,
       "config-opts": [
         "-Dbuild-player-backends=gstreamer-cairo,gstreamer-opengl",
-        "--buildtype=release", "--libdir=lib"
+        "--buildtype=release"
       ],
       "cleanup": [ "/include" ],
       "sources": [
