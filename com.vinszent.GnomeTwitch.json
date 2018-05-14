@@ -49,6 +49,10 @@
         {
           "type": "patch",
           "path": "6bee8bc0d1626087340138e66225d55ebe9d498e.patch"
+        },
+        {
+          "type": "patch",
+          "path": "0001-Use-new-Twitch-API-URL-over-SSL.patch"
         }
       ],
       "modules": [
