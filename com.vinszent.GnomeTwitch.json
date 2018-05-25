@@ -27,8 +27,8 @@
       "buildsystem": "meson",
       "sources": [{
         "type": "archive",
-        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.4.tar.xz",
-        "sha256": "2a56aa5d2d8cd912f2bce17f174713d2c417ca298f1f9c28ee66d4aa1e1d9e62"
+        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.5.tar.xz",
+        "sha256": "812b865f3936d0c5b30f766a126783c99fe00c166c1a7677d50790201c573878"
       }]
     },
     {
@@ -43,16 +43,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/vinszent/gnome-twitch/archive/v0.4.1.tar.gz",
-          "sha256": "a0e2b13bdd9c2ca572bf70da9b440e886aedf4d1588073dc1338743e8b6eacef"
-        },
-        {
-          "type": "patch",
-          "path": "6bee8bc0d1626087340138e66225d55ebe9d498e.patch"
-        },
-        {
-          "type": "patch",
-          "path": "0001-Use-new-Twitch-API-URL-over-SSL.patch"
+          "url": "https://github.com/vinszent/gnome-twitch/archive/v0.4.2.tar.gz",
+          "sha256": "82c37c858f69c39b7cd38d20c91d8ec2441d339a6d2eaf1f1cc9f0503c52b661"
         }
       ],
       "modules": [
