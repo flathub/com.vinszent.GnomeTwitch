@@ -2,7 +2,7 @@
   "app-id": "com.vinszent.GnomeTwitch",
   "branch": "stable",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.26",
+  "runtime-version": "3.28",
   "sdk": "org.gnome.Sdk",
   "command": "gnome-twitch",
   "finish-args": [
@@ -14,7 +14,6 @@
     "--device=dri",
 
     "--env=GST_PLUGIN_PATH_1_0=/app/lib/gstreamer-1.0",
-    "--env=SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt",
 
     "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
     "--filesystem=xdg-run/dconf",
@@ -27,14 +26,13 @@
       "buildsystem": "meson",
       "sources": [{
         "type": "archive",
-        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.12.5.tar.xz",
-        "sha256": "812b865f3936d0c5b30f766a126783c99fe00c166c1a7677d50790201c573878"
+        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.2.tar.xz",
+        "sha256": "8a351c39c5cfc2bbd31ca434ec4a290a730a26efbdea962fdd8306dce5c576de"
       }]
     },
     {
       "name": "gnome-twitch",
       "buildsystem": "meson",
-      "builddir": true,
       "config-opts": [
         "-Dbuild-player-backends=gstreamer-cairo,gstreamer-opengl",
         "--buildtype=release"
