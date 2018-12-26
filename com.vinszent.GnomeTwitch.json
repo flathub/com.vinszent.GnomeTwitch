@@ -22,12 +22,31 @@
   ],
   "modules": [
     {
+      "name": "ffmpeg",
+      "cleanup": [ "/include", "/lib/pkgconfig", "/share/ffmpeg/examples" ],
+      "config-opts": [
+        "--enable-shared",
+        "--disable-static",
+        "--enable-gnutls",
+        "--disable-doc",
+        "--disable-programs",
+        "--disable-encoders",
+        "--disable-muxers",
+        "--enable-encoder=png"
+      ],
+      "sources": [{
+        "type": "archive",
+        "url": "https://ffmpeg.org/releases/ffmpeg-3.4.5.tar.xz",
+        "sha256": "741cbd6394eaed370774ca4cc089eaafbc54d0824b9aa360d4b3b0cbcbc4a92c"
+      }]
+    },
+    {
       "name": "gst-libav",
       "buildsystem": "meson",
       "sources": [{
         "type": "archive",
-        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.2.tar.xz",
-        "sha256": "8a351c39c5cfc2bbd31ca434ec4a290a730a26efbdea962fdd8306dce5c576de"
+        "url": "https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.4.tar.xz",
+        "sha256": "dfd78591901df7853eab7e56a86c34a1b03635da0d3d56b89aa577f1897865da"
       }]
     },
     {
