@@ -1,6 +1,5 @@
 {
   "app-id": "com.vinszent.GnomeTwitch",
-  "branch": "stable",
   "runtime": "org.gnome.Platform",
   "runtime-version": "3.34",
   "sdk": "org.gnome.Sdk",
