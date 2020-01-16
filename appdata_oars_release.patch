@@ -1,0 +1,32 @@
+--- a/data/com.vinszent.GnomeTwitch.appdata.xml.in	2018-05-19 00:17:51.000000000 +0200
++++ b/data/com.vinszent.GnomeTwitch.appdata.xml.in	2020-01-16 12:37:06.323356333 +0100
+@@ -30,7 +30,29 @@
+       <caption>Viewing live channels</caption>
+     </screenshot>
+   </screenshots>
++  <content_rating type="oars-1.0" />
+   <releases>
++    <release date="2018-05-19" version="0.4.2">
++      <description>
++        <p>Stop gap release to fix some minor bugs until v0.5.0.</p>
++      </description>
++    </release>
++    <release date="2017-05-10" version="0.4.1">
++      <description>
++        <p>
++          Minor bug fixes and translation updates for v0.4.1.
++        </p>
++        <ul>
++          <li>Updated translations for Dutch, German, Polish, Portugese, Russian, Serbian and Spanish.</li>
++          <li>Fixed UI lag when updating channels.</li>
++          <li>Fixed bug that causes the header bar to be shown when hovering over the chat input.</li>
++          <li>Removed indirect restrictions on window width.</li>
++          <li>Fixed a crash when opening a offline channel.</li>
++          <li>Fix some minor GCC warnings.</li>
++          <li>Fix bug where the fullscreen bar is visible twice.</li>
++        </ul>
++      </description>
++    </release>
+     <release date="2017-04-01" version="0.4.0">
+       <description>
+         <p>
